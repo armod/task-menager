@@ -1,6 +1,6 @@
 const Task = require('../models/Task')
 const getAllTask = (req, res) => {
-  res.send('get all task')
+  res.send('Get All Task')
 }
 
 const createTask = async (req, res) => {
