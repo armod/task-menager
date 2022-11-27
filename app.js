@@ -4,13 +4,14 @@ const tasks = require('./routes/tasks')
 const connectDB = require('./db/connect')
 require('dotenv').config()
 // middleware
+app.use(express.static('./public'))
 app.use(express.json())
 
 // routes
-app.get('/', (req, res) => {
-  res.send('Task Menager App')
-  // console.log('Task menager App')
-})
+// app.get('/', (req, res) => {
+//   res.send('Task Menager App')
+//   // console.log('Task menager App')
+// })
 
 // get all task
 app.use('/api/v1/tasks', tasks)
