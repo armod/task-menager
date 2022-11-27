@@ -42,10 +42,15 @@ const deleteTask = async (req, res) => {
     if (!task) {
       return res.status(404).jeson({ msg: `No task with id: ${taskID}` })
     }
+    res.status(200).json({ task })
+    // lub
+    // res.status(200).send()
+    // lub
+    // res.status(200).json({ task: null, status: 'success' })
   } catch (error) {
     res.status(500).json({ msg: error })
   }
-  res.send('Delete task')
+  // res.send('Delete task')
 }
 
 module.exports = { getAllTask, createTask, getTask, updateTask, deleteTask }
